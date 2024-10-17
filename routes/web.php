@@ -33,6 +33,9 @@ Route::controller(AAAController::class)->group(function() {
 
 use App\Http\Controllers\Admin\ProfileController;
 Route::controller(ProfileController::class)->prefix('admin')->group(function() {
-    Route::get('Profile/create', 'add');
-    Route::get('Profile/edit', 'edit');
+    Route::get('profile/create', 'add');
+    Route::get('profile/edit', 'edit');
 });
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
