@@ -43,10 +43,10 @@
                         <!-- Right Side Of Navbar -->
                         <ul class="navbar-nav">
                             <!-- Authentication Links -->
-                            {{-- ログインしていなかったらログイン画面へのリンクを表示 --}}
+                            <!-- {{-- ログインしていなかったらログイン画面へのリンクを表示 --}} -->
                             @guest
                                 <li><a class="nav-link" href="{{ route('login') }}">{{ __('messages.login') }}</a></li>
-                            {{-- ログインしていたらユーザー名とログアウトボタンを表示 --}}
+                            <!-- {{-- ログインしていたらユーザー名とログアウトボタンを表示 --}} -->
                             @else
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
